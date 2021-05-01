@@ -43,7 +43,7 @@ const SideBar = ({notes, classes, selectedNoteIndex, newNote, selectNote, delete
                             required
                         />
                         <Button
-                            className="newNoteSubmitBtn"
+                            className={classes.newNoteSubmitBtn}
                             onClick={addnewNote}>
                                 Submit Note
                         </Button>
