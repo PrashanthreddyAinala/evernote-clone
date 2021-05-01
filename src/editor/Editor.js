@@ -15,7 +15,7 @@ const Editor= ({selectedNote, classes, noteUpdate}) => {
         setText(selectedNote.body);
         setTitle(selectedNote.title);
         setId(selectedNote.id);
-    },[])
+    },[selectedNote.id, selectedNote.body, selectedNote.title])
 
     const updateBody = (val) => {
         noteUpdate(id, {
@@ -40,7 +40,7 @@ const Editor= ({selectedNote, classes, noteUpdate}) => {
             setTitle(selectedNote.title);
             setId(selectedNote.id);
         }
-    },[])
+    },[selectedNote.id,id, selectedNote.body, selectedNote.title])
 
     const updateTitle = async(txt) => {
         await setTitle(txt)
