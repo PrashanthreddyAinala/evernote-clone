@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 
-import 'firebase/storage';
+// import 'firebase/storage';
 import 'firebase/firestore';
 
 var firebaseConfig = {
@@ -14,7 +14,7 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const projectStorage = firebase.storage();
+// const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 
-export default { projectStorage, projectFirestore};
+export default projectFirestore;

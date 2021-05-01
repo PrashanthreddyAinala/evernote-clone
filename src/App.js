@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import projectFirestore from './config';
-import {Button, withStyles} from '@material-ui/core';
 import firebase from 'firebase/app';
 import Editor from './editor/Editor';
 import SideBar from './sidebar/Sidebar';
@@ -12,8 +11,7 @@ function App() {
   const [selectedNoteIndex, setSelectedNoteIndex] = useState(null);
 
   useEffect(()=>{
-    firebase
-      .firestore()
+    projectFirestore
       .collection('notes')
       .onSnapshot(serverUpdate => {
         const notes = serverUpdate.docs.map(_doc => {
